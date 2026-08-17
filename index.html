@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nails Studio</title>
+
+    <link rel="stylesheet" href="/css/estilos.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>💅 Nails Studio</h1>
+        <p>Tu belleza, nuestras manos</p>
+    </header>
+
+    <main>
+
+        <!-- BIENVENIDA -->
+        <section class="bienvenida">
+
+            <h2>¡Reserva tu cita!</h2>
+
+            <p>
+                Agenda tu cita de uñas de manera
+                rápida, fácil y segura.
+            </p>
+
+            <button onclick="mostrarReserva()">
+                📅 Reservar cita
+            </button>
+
+        </section>
+
+
+        <!-- SERVICIOS -->
+        <section class="servicios">
+
+            <h2>Nuestros servicios</h2>
+
+            <div class="tarjetas">
+
+                <div class="tarjeta">
+                    <h3>💅 Manicure</h3>
+
+                    <p>
+                        Cuidado y arreglo de tus uñas.
+                    </p>
+
+                    <strong>$10.00</strong>
+
+                    <button onclick="seleccionarServicio('Manicure')">
+                        Reservar
+                    </button>
+                </div>
+
+
+                <div class="tarjeta">
+                    <h3>✨ Uñas de Gel</h3>
+
+                    <p>
+                        Uñas bonitas y duraderas.
+                    </p>
+
+                    <strong>$20.00</strong>
+
+                    <button onclick="seleccionarServicio('Uñas de Gel')">
+                        Reservar
+                    </button>
+                </div>
+
+
+                <div class="tarjeta">
+                    <h3>💎 Uñas Acrílicas</h3>
+
+                    <p>
+                        Diseños elegantes y personalizados.
+                    </p>
+
+                    <strong>$25.00</strong>
+
+                    <button onclick="seleccionarServicio('Uñas Acrílicas')">
+                        Reservar
+                    </button>
+                </div>
+
+
+                <div class="tarjeta">
+                    <h3>🦶 Pedicure</h3>
+
+                    <p>
+                        Cuidado y relajación para tus pies.
+                    </p>
+
+                    <strong>$15.00</strong>
+
+                    <button onclick="seleccionarServicio('Pedicure')">
+                        Reservar
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMULARIO DE RESERVA -->
+        <section id="reserva" class="reserva">
+
+            <h2>📅 Reservar cita</h2>
+
+            <form onsubmit="confirmarCita(event)">
+
+                <label>Nombre completo</label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Escribe tu nombre"
+                    required
+                >
+
+
+                <label>Servicio</label>
+
+                <select id="servicio" required>
+
+                    <option value="">
+                        Selecciona un servicio
+                    </option>
+
+                    <option value="Manicure">
+                        Manicure - $10
+                    </option>
+
+                    <option value="Uñas de Gel">
+                        Uñas de Gel - $20
+                    </option>
+
+                    <option value="Uñas Acrílicas">
+                        Uñas Acrílicas - $25
+                    </option>
+
+                    <option value="Pedicure">
+                        Pedicure - $15
+                    </option>
+
+                </select>
+
+
+                <label>Fecha</label>
+
+                <input
+                    type="date"
+                    id="fecha"
+                    required
+                >
+
+
+                <label>Hora</label>
+
+                <select id="hora" required>
+
+                    <option value="">
+                        Selecciona una hora
+                    </option>
+
+                    <option value="9:00 AM">9:00 AM</option>
+                    <option value="10:00 AM">10:00 AM</option>
+                    <option value="11:00 AM">11:00 AM</option>
+                    <option value="1:00 PM">1:00 PM</option>
+                    <option value="2:00 PM">2:00 PM</option>
+                    <option value="3:00 PM">3:00 PM</option>
+
+                </select>
+
+
+                <label>Teléfono</label>
+
+                <input
+                    type="tel"
+                    id="telefono"
+                    placeholder="0000-0000"
+                    required
+                >
+
+
+                <button type="submit">
+                    ✅ Confirmar cita
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- CONFIRMACIÓN -->
+        <section id="confirmacion" class="confirmacion">
+
+            <h2>🎉 ¡Cita reservada!</h2>
+
+            <p id="mensajeCita"></p>
+
+            <button onclick="volverInicio()">
+                🏠 Volver al inicio
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>💅 Nails Studio</p>
+
+        <p>
+            Reserva tu momento de belleza ✨
+        </p>
+
+    </footer>
+
+
+    <script src="/js/app.js"></script>
+
+</body>
+</html>
